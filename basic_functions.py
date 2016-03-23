@@ -6,6 +6,7 @@
 CP1404/CP5632 Workshop 04
 Basic functions
 demonstrating various parameters, returns and the use of a main function
+Brandon Winship (13144404)
 """
 __author__ = 'Lindsay Ward'
 
@@ -18,9 +19,12 @@ def main():
 
 def get_limits():
     minimum = int(input("Enter the minimum: "))
-    maximum = int(input("Enter the maximum: "))
-    return minimum, maximum
-
+    maximum = int(input("Enter the maximum (10 or above): "))
+    while maximum > minimum:
+        print("Maximum too low!")
+        maximum = int(input("Enter the maximum (10 or above): "))
+    else:
+        return minimum, maximum
 
 def print_between(start, end):
     for i in range(start, end+1):
