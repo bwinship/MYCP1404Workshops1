@@ -5,3 +5,5 @@ def BMI_calculator(weight, height):
     BMI = weight/(height^2)*100
     print(BMI)
 BMI_calculator()
+
+# ayy lmao
